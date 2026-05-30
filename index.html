@@ -135,14 +135,29 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
 .check-progress { margin: 0 16px 12px; background: var(--paper-dark); border-radius: 4px; height: 5px; overflow: hidden; }
 .check-progress-fill { height: 100%; background: var(--red); border-radius: 4px; transition: width 0.3s; }
 .check-stats { font-size: 12px; color: var(--ink-soft); margin: 8px 16px 6px; }
-<style>.place-link { color: var(--red); text-decoration: none; font-weight: 500; font-size: 14px; } .place-link::after { content: " ↗"; font-size: 11px; opacity: 0.7; }</style>
+<style>.place-link { color: var(--red); text-decoration: none; font-weight: 500; font-size: 14px; } .place-link::after { content: " ↗"; font-size: 11px; opacity: 0.7; }
+.transport-item { padding: 12px 16px; border-top: 0.5px solid var(--line); background: var(--paper); }
+.transport-row { display: flex; gap: 10px; align-items: flex-start; }
+.transport-icon { min-width: 28px; display:flex; align-items:center; justify-content:center; margin-top:2px; }
+.transport-icon svg { width:16px; height:16px; stroke:var(--red); stroke-width:2; fill:none; }
+.transport-info { flex:1; }
+.transport-name { font-size:13px; font-weight:500; color:var(--ink); }
+.transport-link { color:var(--red); text-decoration:none; font-weight:500; font-size:13px; }
+.transport-link::after { content:" ↗"; font-size:10px; opacity:0.7; }
+.transport-detail { font-size:11px; color:var(--ink-soft); margin-top:2px; line-height:1.5; }
+.transport-ref { font-size:10px; background:var(--paper-dark); color:var(--ink-mid); padding:1px 7px; border-radius:5px; display:inline-block; margin-top:3px; font-family:monospace; }
+.hotel-return { padding: 12px 16px; border-top: 0.5px solid var(--line); display:flex; gap:10px; align-items:center; background: #F5EAE7; }
+.hotel-return svg { width:15px; height:15px; stroke:var(--red); stroke-width:2; fill:none; flex-shrink:0; }
+.hotel-return-text { font-size:13px; color:var(--ink-mid); }
+.hotel-return a { color:var(--red); text-decoration:none; font-weight:500; }
+.hotel-return a::after { content:" ↗"; font-size:10px; opacity:0.7; }
 </style>
 </head>
 <body>
 <div class="app">
   <div class="header">
     <h1>Voyage en Chine</h1>
-    <p>Didier · Août 2025 · Shanghai · Zhangjiajie · Xi'an · Pékin</p>
+    <p>Didier · Août 2026 · Shanghai · Zhangjiajie · Xi'an · Pékin</p>
   </div>
   <div class="scroll">
 
@@ -156,7 +171,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
       </div>
       <div id="city-shanghai">
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Dim 17 août</span><span class="day-title">Arrivée & Le Bund</span></div>
+          <div class="day-header"><span class="day-badge">Lun 17 août 2026</span><span class="day-title">Arrivée & Le Bund</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">13:00</div><div class="place-info"><div class="place-name">Arrivée Pudong (PVG)</div><div class="place-zh">浦东国际机场</div><div class="place-desc">Installation à l'hôtel, puis soirée au Bund.</div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 2 → Centre · 45 min · 7 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -183,7 +198,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
           </div>
         </div>
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Lun 18 août</span><span class="day-title">Vieille ville & Modernité</span></div>
+          <div class="day-header"><span class="day-badge">Mar 18 août 2026</span><span class="day-title">Vieille ville & Modernité</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Yu+Garden+Shanghai" target="_blank">Jardin Yu</a></div><div class="place-zh">豫园 · Yù Yuán</div><div class="place-desc">Jardin Ming. Arrivez tôt pour éviter la foule.</div><div class="tags"><span class="tag tag-blue">~30 CNY</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 10 → Yuyuan Garden · 10 min · 3 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -205,7 +220,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
           </div>
         </div>
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Mar 19 août</span><span class="day-title">Culture & French Concession</span></div>
+          <div class="day-header"><span class="day-badge">Mer 19 août 2026</span><span class="day-title">Culture & French Concession</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">09:30</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Shanghai+Museum+People+Square" target="_blank">Musée de Shanghai</a></div><div class="place-zh">上海博物馆</div><div class="place-desc">L'un des meilleurs musées de Chine. Passeport requis.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 1 ou 2 → People's Square · 10 min</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -222,15 +237,33 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#E4202A"></div></div><div class="t-info"><div class="t-place">Dapuqiao 打浦桥</div><div class="t-sub">Sortie 1 → Taikang Road n°210. Tianzifang.</div></div></div>
             </div>
           </div>
-        </div>
+  <div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=WangYue+Paris+Fashion+Shanghai+Financial+Center" target="_blank">WangYue Shanghai</a></div>
+</div>
+      </div>
       </div>
       <div id="city-zhangjiajie" style="display:none">
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Mer 20 août</span><span class="day-title">Arrivée Zhangjiajie</span></div>
-          <div class="place"><div class="place-row"><div class="place-time">19:40</div><div class="place-info"><div class="place-name">Aéroport DYG</div><div class="place-zh">张家界荷花国际机场</div><div class="place-desc">Vol depuis Shanghai (17:20→19:40). Taxi officiel ou DiDi vers l'hôtel.</div><div class="tags"><span class="tag tag-amber">~80 CNY taxi</span></div></div></div></div>
+          <div class="day-header"><span class="day-badge">Jeu 20 août 2026</span><span class="day-title">Vol Shanghai → Zhangjiajie</span></div>
+          <div class="transport-item">
+  <div class="transport-row">
+    <div class="transport-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91"/><path d="M2 2l20 20"/></svg></div>
+    <div class="transport-info">
+      <a class="transport-link" href="https://maps.google.com/?q=Shanghai+Pudong+International+Airport" target="_blank">17:20 · Shanghai Pudong (PVG)</a>
+      <div class="transport-detail">Shanghai Airlines FM9343 · Classe Touriste · 2h25</div>
+      <div class="transport-detail">▼</div>
+      <a class="transport-link" href="https://maps.google.com/?q=Zhangjiajie+Hehua+Airport+DYG" target="_blank">19:45 · Dayong Zhangjiajie (DYG)</a>
+      <div><span class="transport-ref">Réf: QZJSC1</span></div>
+    </div>
+  </div>
+</div><div class="place"><div class="place-row"><div class="place-time">19:45</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Zhangjiajie+Hehua+Airport+DYG" target="_blank">Arrivée Aéroport DYG</a></div><div class="place-zh">张家界荷花国际机场</div><div class="place-desc">Taxi officiel ou DiDi vers l'hôtel. ~80 CNY · 30 min.</div></div></div><div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=Tianmenshan+YOLO+RELIAN+Riverside+Hotel+Zhangjiajie" target="_blank">YOLO RELIAN Riverside</a></div>
+</div></div>
         </div>
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Jeu 21 août</span><span class="day-title">Parc National Avatar</span></div>
+          <div class="day-header"><span class="day-badge">Ven 21 août 2026</span><span class="day-title">Parc National Avatar</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">08:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Zhangjiajie+National+Forest+Park" target="_blank">Parc National Zhangjiajie</a></div><div class="place-zh">张家界国家森林公园</div><div class="place-desc">Les piliers de quartzite d'Avatar. Pass 2 jours recommandé.</div><div class="tags"><span class="tag tag-blue">~245 CNY (2j)</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/></svg><span>Bus n°1 ou Taxi · 20 min · ~40 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -242,17 +275,37 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
           <div class="place">
             <div class="place-row"><div class="place-time">14:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Zhangjiajie+Grand+Canyon+Glass+Bridge" target="_blank">Pont de Verre</a></div><div class="place-zh">张家界大峡谷玻璃桥</div><div class="place-desc">430m au-dessus du vide. Réservation obligatoire !</div><div class="tags"><span class="tag tag-blue">~138 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
           </div>
-        </div>
+  <div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=Tianmenshan+YOLO+RELIAN+Riverside+Hotel+Zhangjiajie" target="_blank">YOLO RELIAN Riverside</a></div>
+</div>
+      </div>
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Ven 22 août</span><span class="day-title">Montagne Tianmen</span></div>
+          <div class="day-header"><span class="day-badge">Sam 22 août 2026</span><span class="day-title">Montagne Tianmen</span></div>
           <div class="place"><div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Tianmen+Mountain+Zhangjiajie" target="_blank">Montagne Tianmen</a></div><div class="place-zh">天门山 · Tiānmén Shān</div><div class="place-desc">Téléphérique le plus long du monde (7km). Passerelle en verre à flanc de falaise. Gare basse en centre-ville.</div><div class="tags"><span class="tag tag-blue">~258 CNY tout inclus</span></div></div></div></div>
-        </div>
+  <div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=Tianmenshan+YOLO+RELIAN+Riverside+Hotel+Zhangjiajie" target="_blank">YOLO RELIAN Riverside</a></div>
+</div>
+      </div>
       </div>
       <div id="city-xian" style="display:none">
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Sam 23 août</span><span class="day-title">Arrivée & Quartier Musulman</span></div>
-          <div class="place">
-            <div class="place-row"><div class="place-time">12:30</div><div class="place-info"><div class="place-name">Aéroport Xi'an (XIY)</div><div class="place-zh">西安咸阳国际机场</div><div class="place-desc">Vol direct depuis Zhangjiajie.</div></div></div>
+          <div class="day-header"><span class="day-badge">Dim 23 août 2026</span><span class="day-title">Journée libre Xi'an</span></div>
+          <div class="transport-item">
+  <div class="transport-row">
+    <div class="transport-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91"/><path d="M2 2l20 20"/></svg></div>
+    <div class="transport-info">
+      <a class="transport-link" href="https://maps.google.com/?q=Zhangjiajie+Hehua+Airport+DYG" target="_blank">11:05 · Zhangjiajie Hehua (DYG) T2</a>
+      <div class="transport-detail">Sichuan Airlines 3U3258 · Économie · Airbus A320 · 1h25</div>
+      <div class="transport-detail">▼</div>
+      <a class="transport-link" href="https://maps.google.com/?q=Xian+Xianyang+International+Airport+XIY" target="_blank">12:30 · Xi'an Xianyang (XIY) T5</a>
+      <div><span class="transport-ref">PNR: QX7PSG</span></div>
+    </div>
+  </div>
+</div>
+<div class="place">
+            <div class="place-row"><div class="place-time">12:30</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Xian+Xianyang+International+Airport+XIY" target="_blank">Arrivée Xi'an Xianyang (XIY)</a></div><div class="place-zh">西安咸阳国际机场</div><div class="place-desc">Vol depuis Zhangjiajie. DiDi ou Metro Ligne 14 → Bell Tower.</div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Metro Ligne 14 → Bell Tower · 50 min · 8 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#8B4513"></div><div class="t-line" style="background:#8B4513"></div></div><div class="t-info"><div class="t-place">Aéroport XIY</div><div class="t-sub"><span class="lbadge" style="background:#8B4513;color:white">14</span> direction Fangzhicheng (纺织城)</div></div></div>
@@ -260,9 +313,22 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Muslim+Quarter+Xian+Huimin+Street" target="_blank">Quartier Musulman</a></div><div class="place-zh">回民街 · Huímín Jiē</div><div class="place-desc">Street food extraordinaire — roujiamo et nouilles biangbiang !</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
-        </div>
+  <div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=西安大唐印+Siheyuan+Xian" target="_blank">西安大唐印 Siheyuan</a></div>
+</div><div class="transport-item">
+  <div class="transport-row">
+    <div class="transport-icon"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2M8 7h.01M16 7h.01"/></svg></div>
+    <div class="transport-info">
+      <div class="transport-name" style="color:var(--ink-soft);">🚄 Train Xi'an → Pékin</div>
+      <div class="transport-detail" style="color:var(--gold);">Horaires à confirmer — billets disponibles 15j avant</div>
+      <div class="transport-detail">Réservation sur 12306.cn ou trip.com</div>
+    </div>
+  </div>
+</div>
+      </div>
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Dim 24 août</span><span class="day-title">Terre Cuite & Remparts</span></div>
+          <div class="day-header"><span class="day-badge">Lun 24 août 2026</span><span class="day-title">Terre Cuite → Vol Xi'an</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">08:30</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Terracotta+Army+Museum+Xian" target="_blank">Armée de Terre Cuite</a></div><div class="place-zh">兵马俑 · Bīngmǎ Yǒng</div><div class="place-desc">8000 soldats grandeur nature. Comptez 3-4h. Réservez en ligne !</div><div class="tags"><span class="tag tag-blue">~150 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Metro L2 + Bus 306 · 1h · ~10 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -273,11 +339,15 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Xian+City+Wall" target="_blank">Remparts de Xi'an</a></div><div class="place-zh">西安城墙</div><div class="place-desc">Les mieux préservés de Chine. Location de vélos incluse. Station Yongningmen (永宁门).</div><div class="tags"><span class="tag tag-blue">~54 CNY</span></div></div></div></div>
-        </div>
+  <div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=Happy+Dragon+Hotel+Beijing+Forbidden+City" target="_blank">Happy Dragon Hotel</a></div>
+</div>
+      </div>
       </div>
       <div id="city-pekin" style="display:none">
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Lun 25 août</span><span class="day-title">Cité Interdite & Tiananmen</span></div>
+          <div class="day-header"><span class="day-badge">Lun 25 août 2026</span><span class="day-title">Arrivée Pékin · Cité Interdite</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Forbidden+City+Beijing" target="_blank">Cité Interdite</a></div><div class="place-zh">故宫 · Gùgōng</div><div class="place-desc">980 bâtiments. Réservation obligatoire, quota limité !</div><div class="tags"><span class="tag tag-blue">~60 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 1 → Tiananmen East · 10 min · 4 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -287,9 +357,13 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Tiananmen+Square+Beijing" target="_blank">Place Tiananmen</a></div><div class="place-zh">天安门广场</div><div class="place-desc">La plus grande place du monde. Portrait de Mao.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
-        </div>
+  <div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=Happy+Dragon+Hotel+Beijing+Forbidden+City" target="_blank">Happy Dragon Hotel</a></div>
+</div>
+      </div>
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Mar 26 août</span><span class="day-title">Grande Muraille</span></div>
+          <div class="day-header"><span class="day-badge">Mar 26 août 2026</span><span class="day-title">Arrivée Pékin · Cité Interdite</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">08:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Mutianyu+Great+Wall+Beijing" target="_blank">Grande Muraille — Mutianyu</a></div><div class="place-zh">慕田峪长城</div><div class="place-desc">Section moins touristique. Téléphérique + toboggan pour descendre !</div><div class="tags"><span class="tag tag-blue">~135 CNY tout inclus</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><path d="M8 6v12M3 12h18"/></svg><span>Metro L2 + Bus H23 · 1h30 · ~15 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -299,9 +373,13 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#388E3C"></div></div><div class="t-info"><div class="t-place">Mutianyu 慕田峪</div><div class="t-sub">Bus retour jusqu'à 17h30 — ne ratez pas le dernier !</div></div></div>
             </div>
           </div>
-        </div>
+  <div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=Happy+Dragon+Hotel+Beijing+Forbidden+City" target="_blank">Happy Dragon Hotel</a></div>
+</div>
+      </div>
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Mer 27 août</span><span class="day-title">Temple du Ciel & Hutongs</span></div>
+          <div class="day-header"><span class="day-badge">Mer 27 août 2026</span><span class="day-title">Grande Muraille</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Temple+of+Heaven+Beijing" target="_blank">Temple du Ciel</a></div><div class="place-zh">天坛 · Tiāntán</div><div class="place-desc">Chef-d'œuvre Ming. Tai-chi avec les Pékinois le matin !</div><div class="tags"><span class="tag tag-blue">~35 CNY</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 5 → Tiantan East Gate · 15 min · 4 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -313,7 +391,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
           <div class="place"><div class="place-row"><div class="place-time">14:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Houhai+Lake+Hutong+Beijing" target="_blank">Hutongs & Lac Houhai</a></div><div class="place-zh">胡同 / 后海</div><div class="place-desc">Ruelles historiques. Rickshaw. Bars au bord du lac le soir. Station Beihai North (北海北) Ligne 6, Sortie B.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
         </div>
         <div class="day-card">
-          <div class="day-header"><span class="day-badge">Sam 29 août</span><span class="day-title">Retour Barcelone</span></div>
+          <div class="day-header"><span class="day-badge">Jeu 28 août 2026</span><span class="day-title">Temple du Ciel & Hutongs</span></div>
           <div class="place">
             <div class="place-row"><div class="place-time">00:40</div><div class="place-info"><div class="place-name">Vol Pékin → Barcelone</div><div class="place-zh">北京首都国际机场 PEK</div><div class="place-desc">Arrivée BCN 13:25. Prévoir 3h avant le vol.</div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 10 + Airport Express · 45 min · 30 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -323,7 +401,23 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#7B68EE"></div></div><div class="t-info"><div class="t-place">Terminal 3 首都机场T3</div><div class="t-sub">~20 min. Vols internationaux = T3.</div></div></div>
             </div>
           </div>
-        </div>
+  <div class="hotel-return">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hotel-return-text">Retour à l'hôtel · <a href="https://maps.google.com/?q=Happy+Dragon+Hotel+Beijing+Forbidden+City" target="_blank">Happy Dragon Hotel</a></div>
+</div>        <div class="day-card">
+          <div class="day-header"><span class="day-badge">Lun 31 août 2026</span><span class="day-title">Retour Barcelone</span></div><div class="transport-item">
+  <div class="transport-row">
+    <div class="transport-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91"/><path d="M2 2l20 20"/></svg></div>
+    <div class="transport-info">
+      <a class="transport-link" href="https://maps.google.com/?q=Beijing+Capital+International+Airport+PEK" target="_blank">00:40 · Pékin Capital (PEK)</a>
+      <div class="transport-detail">Emirates EK307 · 8h20 → Dubai (DXB) 05:00</div>
+      <div class="transport-detail">Escale Dubai · 3h15 · EK185 · 08:15 → 7h10</div>
+      <a class="transport-link" href="https://maps.google.com/?q=Barcelona+El+Prat+Airport+BCN" target="_blank">13:25 · Barcelone El Prat (BCN)</a>
+      <div><span class="transport-ref">Réf: MY7NCN</span></div>
+    </div>
+  </div>
+</div>        </div>
+      </div>
       </div>
     </div>
 
