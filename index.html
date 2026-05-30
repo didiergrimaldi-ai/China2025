@@ -246,7 +246,80 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
       <div id="city-zhangjiajie" style="display:none">
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Jeu 20 août 2026</span><span class="day-title">Vol Shanghai → Zhangjiajie</span></div>
-          <div class="transport-item">
+          <div class="place">
+            <div class="place-row">
+              <div class="place-time">08:00</div>
+              <div class="place-info">
+                <div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Yang+Dumplings+Shanghai+Sheng+Jian+Bao" target="_blank">Yang's Dumplings 小杨生煎</a></div>
+                <div class="place-zh">小杨生煎 · Xiǎo Yáng Shēng Jiān</div>
+                <div class="place-desc">Institution absolue de Shanghai — raviolis frits croustillants en bas, juteux dedans. Le vrai petit déjeuner shanghaien. Queue inévitable mais ça vaut tout !</div>
+                <div class="tags"><span class="tag tag-green">~15 CNY</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="place">
+            <div class="place-row">
+              <div class="place-time">09:30</div>
+              <div class="place-info">
+                <div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Rockbund+Art+Museum+Shanghai" target="_blank">Rockbund Art Museum</a></div>
+                <div class="place-zh">外滩美术馆</div>
+                <div class="place-desc">Bâtiment Art Déco années 1930 restauré à 5 min du Bund. Expo d'art contemporain dans un écrin historique exceptionnel.</div>
+                <div class="tags"><span class="tag tag-blue">~50 CNY</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="place">
+            <div class="place-row">
+              <div class="place-time">11:00</div>
+              <div class="place-info">
+                <div class="place-name"><a class="place-link" href="https://maps.google.com/?q=WangYue+Paris+Fashion+Shanghai+Financial+Center" target="_blank">Checkout & dépôt bagages</a></div>
+                <div class="place-zh">酒店寄存行李</div>
+                <div class="place-desc">Checkout WangYue. Demandez : "Can you keep our luggage until 15h?" — gratuit, standard dans tous les hôtels chinois.</div>
+                <div class="tags"><span class="tag tag-green">Gratuit</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="place">
+            <div class="place-row">
+              <div class="place-time">11:30</div>
+              <div class="place-info">
+                <div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Longhua+Temple+Shanghai" target="_blank">Temple Longhua 龙华寺</a></div>
+                <div class="place-zh">龙华寺 · Lónghuá Sì</div>
+                <div class="place-desc">Le plus vieux temple bouddhiste de Shanghai — pagode du 10e siècle, marché de moines, ambiance hors du temps. Loin des circuits touristiques.</div>
+                <div class="tags"><span class="tag tag-blue">~20 CNY</span></div>
+              </div>
+            </div>
+            <button class="transit-btn" onclick="toggleT(this)">
+              <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg>
+              <span>Ligne 11 → Longhua · 20 min · 4 CNY</span>
+              <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="transit-detail">
+              <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#7B3F9E"></div><div class="t-line" style="background:#7B3F9E"></div></div><div class="t-info"><div class="t-place">Votre hôtel</div><div class="t-sub">Prenez la <span class="lbadge" style="background:#7B3F9E;color:white">11</span> direction Jiuting (九亭)</div></div></div>
+              <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#7B3F9E"></div></div><div class="t-info"><div class="t-place">Longhua 龙华站</div><div class="t-sub">Sortie 1 → temple à 5 min à pied.</div></div></div>
+            </div>
+          </div>
+          <div class="place">
+            <div class="place-row">
+              <div class="place-time">14:30</div>
+              <div class="place-info">
+                <div class="place-name"><a class="place-link" href="https://maps.google.com/?q=WangYue+Paris+Fashion+Shanghai+Financial+Center" target="_blank">Récupération des valises</a></div>
+                <div class="place-zh">取行李</div>
+                <div class="place-desc">Retour à l'hôtel, récupérez les bagages. Prenez la Ligne 2 → Pudong. Soyez à l'aéroport à 15h15 minimum.</div>
+                <div class="tags"><span class="tag tag-amber">Départ 15h00</span></div>
+              </div>
+            </div>
+            <button class="transit-btn" onclick="toggleT(this)">
+              <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg>
+              <span>Ligne 2 → Pudong Airport · 45 min · 7 CNY</span>
+              <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="transit-detail">
+              <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#009A44"></div><div class="t-line" style="background:#009A44"></div></div><div class="t-info"><div class="t-place">Centre Shanghai</div><div class="t-sub">Prenez la <span class="lbadge" style="background:#009A44;color:white">2</span> direction Pudong Airport (浦东机场)</div></div></div>
+              <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#009A44"></div></div><div class="t-info"><div class="t-place">Pudong Airport 浦东机场</div><div class="t-sub">Terminus. Vérifiez le terminal sur votre billet FM9343.</div></div></div>
+            </div>
+          </div>
+<div class="transport-item">
   <div class="transport-row">
     <div class="transport-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91"/><path d="M2 2l20 20"/></svg></div>
     <div class="transport-info">
