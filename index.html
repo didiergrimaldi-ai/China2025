@@ -135,6 +135,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
 .check-progress { margin: 0 16px 12px; background: var(--paper-dark); border-radius: 4px; height: 5px; overflow: hidden; }
 .check-progress-fill { height: 100%; background: var(--red); border-radius: 4px; transition: width 0.3s; }
 .check-stats { font-size: 12px; color: var(--ink-soft); margin: 8px 16px 6px; }
+<style>.place-link { color: var(--red); text-decoration: none; font-weight: 500; font-size: 14px; } .place-link::after { content: " ↗"; font-size: 11px; opacity: 0.7; }</style>
 </style>
 </head>
 <body>
@@ -165,7 +166,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place">
-            <div class="place-row"><div class="place-time">19:00</div><div class="place-info"><div class="place-name">The Bund</div><div class="place-zh">外滩 · Wàitān</div><div class="place-desc">Vue spectaculaire sur Pudong illuminé. À ne pas rater le soir !</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
+            <div class="place-row"><div class="place-time">19:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=The+Bund+Shanghai" target="_blank">The Bund</a></div><div class="place-zh">外滩 · Wàitān</div><div class="place-desc">Vue spectaculaire sur Pudong illuminé. À ne pas rater le soir !</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 2 → Nanjing East Road · 10 min · 3 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#009A44"></div><div class="t-line" style="background:#009A44"></div></div><div class="t-info"><div class="t-place">Votre hôtel</div><div class="t-sub"><span class="lbadge" style="background:#009A44;color:white">2</span> direction Pudong Airport</div></div></div>
@@ -173,7 +174,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place">
-            <div class="place-row"><div class="place-time">21:00</div><div class="place-info"><div class="place-name">Shanghai Tower</div><div class="place-zh">上海中心大厦</div><div class="place-desc">118e étage, ascenseur le plus rapide du monde. Ouvert jusqu'à 21h30.</div><div class="tags"><span class="tag tag-blue">~150 CNY/pers</span></div></div></div>
+            <div class="place-row"><div class="place-time">21:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Shanghai+Tower+Lujiazui" target="_blank">Shanghai Tower</a></div><div class="place-zh">上海中心大厦</div><div class="place-desc">118e étage, ascenseur le plus rapide du monde. Ouvert jusqu'à 21h30.</div><div class="tags"><span class="tag tag-blue">~150 CNY/pers</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 2 → Lujiazui · 1 arrêt · 3 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#009A44"></div><div class="t-line" style="background:#009A44"></div></div><div class="t-info"><div class="t-place">Nanjing East Road 南京东路</div><div class="t-sub"><span class="lbadge" style="background:#009A44;color:white">2</span> direction Pudong Airport</div></div></div>
@@ -184,7 +185,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Lun 18 août</span><span class="day-title">Vieille ville & Modernité</span></div>
           <div class="place">
-            <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name">Jardin Yu</div><div class="place-zh">豫园 · Yù Yuán</div><div class="place-desc">Jardin Ming. Arrivez tôt pour éviter la foule.</div><div class="tags"><span class="tag tag-blue">~30 CNY</span></div></div></div>
+            <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Yu+Garden+Shanghai" target="_blank">Jardin Yu</a></div><div class="place-zh">豫园 · Yù Yuán</div><div class="place-desc">Jardin Ming. Arrivez tôt pour éviter la foule.</div><div class="tags"><span class="tag tag-blue">~30 CNY</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 10 → Yuyuan Garden · 10 min · 3 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#C6A000"></div><div class="t-line" style="background:#C6A000"></div></div><div class="t-info"><div class="t-place">Votre hôtel</div><div class="t-sub"><span class="lbadge" style="background:#C6A000;color:white">10</span> direction Yuyuan (豫园)</div></div></div>
@@ -192,7 +193,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place">
-            <div class="place-row"><div class="place-time">12:00</div><div class="place-info"><div class="place-name">Xintiandi</div><div class="place-zh">新天地 · Xīn Tiāndì</div><div class="place-desc">Architecture sino-française années 1920. Déjeuner dans un café branché.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
+            <div class="place-row"><div class="place-time">12:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Xintiandi+Shanghai" target="_blank">Xintiandi</a></div><div class="place-zh">新天地 · Xīn Tiāndì</div><div class="place-desc">Architecture sino-française années 1920. Déjeuner dans un café branché.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 10 → Xintiandi · 2 arrêts · 3 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#C6A000"></div><div class="t-line" style="background:#C6A000"></div></div><div class="t-info"><div class="t-place">Yuyuan 豫园</div><div class="t-sub"><span class="lbadge" style="background:#C6A000;color:white">10</span> direction Hongqiao (虹桥)</div></div></div>
@@ -200,13 +201,13 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place">
-            <div class="place-row"><div class="place-time">19:00</div><div class="place-info"><div class="place-name">Nanjing Road</div><div class="place-zh">南京路步行街</div><div class="place-desc">1 km piéton, néons et animation.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
+            <div class="place-row"><div class="place-time">19:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Nanjing+Road+Pedestrian+Street+Shanghai" target="_blank">Nanjing Road</a></div><div class="place-zh">南京路步行街</div><div class="place-desc">1 km piéton, néons et animation.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
           </div>
         </div>
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Mar 19 août</span><span class="day-title">Culture & French Concession</span></div>
           <div class="place">
-            <div class="place-row"><div class="place-time">09:30</div><div class="place-info"><div class="place-name">Musée de Shanghai</div><div class="place-zh">上海博物馆</div><div class="place-desc">L'un des meilleurs musées de Chine. Passeport requis.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
+            <div class="place-row"><div class="place-time">09:30</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Shanghai+Museum+People+Square" target="_blank">Musée de Shanghai</a></div><div class="place-zh">上海博物馆</div><div class="place-desc">L'un des meilleurs musées de Chine. Passeport requis.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 1 ou 2 → People's Square · 10 min</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#E4202A"></div><div class="t-line" style="background:#E4202A"></div></div><div class="t-info"><div class="t-place">Votre hôtel</div><div class="t-sub"><span class="lbadge" style="background:#E4202A;color:white">1</span> ou <span class="lbadge" style="background:#009A44;color:white">2</span> jusqu'à People's Square</div></div></div>
@@ -214,7 +215,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place">
-            <div class="place-row"><div class="place-time">14:00</div><div class="place-info"><div class="place-name">Tianzifang</div><div class="place-zh">田子坊 · Tiánzǐfāng</div><div class="place-desc">Ruelles pavées, ateliers d'artistes, boutiques de créateurs.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
+            <div class="place-row"><div class="place-time">14:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Tianzifang+Shanghai" target="_blank">Tianzifang</a></div><div class="place-zh">田子坊 · Tiánzǐfāng</div><div class="place-desc">Ruelles pavées, ateliers d'artistes, boutiques de créateurs.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 1 → Dapuqiao · 3 arrêts · 3 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#E4202A"></div><div class="t-line" style="background:#E4202A"></div></div><div class="t-info"><div class="t-place">People's Square 人民广场</div><div class="t-sub"><span class="lbadge" style="background:#E4202A;color:white">1</span> direction Shanghai South (莘庄)</div></div></div>
@@ -231,7 +232,7 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Jeu 21 août</span><span class="day-title">Parc National Avatar</span></div>
           <div class="place">
-            <div class="place-row"><div class="place-time">08:00</div><div class="place-info"><div class="place-name">Parc National Zhangjiajie</div><div class="place-zh">张家界国家森林公园</div><div class="place-desc">Les piliers de quartzite d'Avatar. Pass 2 jours recommandé.</div><div class="tags"><span class="tag tag-blue">~245 CNY (2j)</span></div></div></div>
+            <div class="place-row"><div class="place-time">08:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Zhangjiajie+National+Forest+Park" target="_blank">Parc National Zhangjiajie</a></div><div class="place-zh">张家界国家森林公园</div><div class="place-desc">Les piliers de quartzite d'Avatar. Pass 2 jours recommandé.</div><div class="tags"><span class="tag tag-blue">~245 CNY (2j)</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/></svg><span>Bus n°1 ou Taxi · 20 min · ~40 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#1565C0"></div><div class="t-line" style="background:#1565C0"></div></div><div class="t-info"><div class="t-place">Centre-ville</div><div class="t-sub">Bus n°1 (张家界1路) ou DiDi ~40 CNY.</div></div></div>
@@ -239,12 +240,12 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
             </div>
           </div>
           <div class="place">
-            <div class="place-row"><div class="place-time">14:00</div><div class="place-info"><div class="place-name">Pont de Verre</div><div class="place-zh">张家界大峡谷玻璃桥</div><div class="place-desc">430m au-dessus du vide. Réservation obligatoire !</div><div class="tags"><span class="tag tag-blue">~138 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
+            <div class="place-row"><div class="place-time">14:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Zhangjiajie+Grand+Canyon+Glass+Bridge" target="_blank">Pont de Verre</a></div><div class="place-zh">张家界大峡谷玻璃桥</div><div class="place-desc">430m au-dessus du vide. Réservation obligatoire !</div><div class="tags"><span class="tag tag-blue">~138 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
           </div>
         </div>
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Ven 22 août</span><span class="day-title">Montagne Tianmen</span></div>
-          <div class="place"><div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name">Montagne Tianmen</div><div class="place-zh">天门山 · Tiānmén Shān</div><div class="place-desc">Téléphérique le plus long du monde (7km). Passerelle en verre à flanc de falaise. Gare basse en centre-ville.</div><div class="tags"><span class="tag tag-blue">~258 CNY tout inclus</span></div></div></div></div>
+          <div class="place"><div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Tianmen+Mountain+Zhangjiajie" target="_blank">Montagne Tianmen</a></div><div class="place-zh">天门山 · Tiānmén Shān</div><div class="place-desc">Téléphérique le plus long du monde (7km). Passerelle en verre à flanc de falaise. Gare basse en centre-ville.</div><div class="tags"><span class="tag tag-blue">~258 CNY tout inclus</span></div></div></div></div>
         </div>
       </div>
       <div id="city-xian" style="display:none">
@@ -258,12 +259,12 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#8B4513"></div></div><div class="t-info"><div class="t-place">Bell Tower 钟楼</div><div class="t-sub">Quartier Musulman à 10 min à pied.</div></div></div>
             </div>
           </div>
-          <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name">Quartier Musulman</div><div class="place-zh">回民街 · Huímín Jiē</div><div class="place-desc">Street food extraordinaire — roujiamo et nouilles biangbiang !</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
+          <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Muslim+Quarter+Xian+Huimin+Street" target="_blank">Quartier Musulman</a></div><div class="place-zh">回民街 · Huímín Jiē</div><div class="place-desc">Street food extraordinaire — roujiamo et nouilles biangbiang !</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
         </div>
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Dim 24 août</span><span class="day-title">Terre Cuite & Remparts</span></div>
           <div class="place">
-            <div class="place-row"><div class="place-time">08:30</div><div class="place-info"><div class="place-name">Armée de Terre Cuite</div><div class="place-zh">兵马俑 · Bīngmǎ Yǒng</div><div class="place-desc">8000 soldats grandeur nature. Comptez 3-4h. Réservez en ligne !</div><div class="tags"><span class="tag tag-blue">~150 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
+            <div class="place-row"><div class="place-time">08:30</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Terracotta+Army+Museum+Xian" target="_blank">Armée de Terre Cuite</a></div><div class="place-zh">兵马俑 · Bīngmǎ Yǒng</div><div class="place-desc">8000 soldats grandeur nature. Comptez 3-4h. Réservez en ligne !</div><div class="tags"><span class="tag tag-blue">~150 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Metro L2 + Bus 306 · 1h · ~10 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#F4A922"></div><div class="t-line" style="background:#F4A922"></div></div><div class="t-info"><div class="t-place">Bell Tower 钟楼</div><div class="t-sub"><span class="lbadge" style="background:#F4A922;color:#333">2</span> direction Fangzhicheng. Terminus.</div></div></div>
@@ -271,26 +272,26 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#F4A922"></div></div><div class="t-info"><div class="t-place">Mausolée Qin Shi Huang</div><div class="t-sub">Navette interne pour halls 1, 2 et 3.</div></div></div>
             </div>
           </div>
-          <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name">Remparts de Xi'an</div><div class="place-zh">西安城墙</div><div class="place-desc">Les mieux préservés de Chine. Location de vélos incluse. Station Yongningmen (永宁门).</div><div class="tags"><span class="tag tag-blue">~54 CNY</span></div></div></div></div>
+          <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Xian+City+Wall" target="_blank">Remparts de Xi'an</a></div><div class="place-zh">西安城墙</div><div class="place-desc">Les mieux préservés de Chine. Location de vélos incluse. Station Yongningmen (永宁门).</div><div class="tags"><span class="tag tag-blue">~54 CNY</span></div></div></div></div>
         </div>
       </div>
       <div id="city-pekin" style="display:none">
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Lun 25 août</span><span class="day-title">Cité Interdite & Tiananmen</span></div>
           <div class="place">
-            <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name">Cité Interdite</div><div class="place-zh">故宫 · Gùgōng</div><div class="place-desc">980 bâtiments. Réservation obligatoire, quota limité !</div><div class="tags"><span class="tag tag-blue">~60 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
+            <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Forbidden+City+Beijing" target="_blank">Cité Interdite</a></div><div class="place-zh">故宫 · Gùgōng</div><div class="place-desc">980 bâtiments. Réservation obligatoire, quota limité !</div><div class="tags"><span class="tag tag-blue">~60 CNY</span><span class="tag tag-amber">Réserver !</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 1 → Tiananmen East · 10 min · 4 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#D32F2F"></div><div class="t-line" style="background:#D32F2F"></div></div><div class="t-info"><div class="t-place">Votre hôtel</div><div class="t-sub"><span class="lbadge" style="background:#D32F2F;color:white">1</span> direction Pingguoyuan (苹果园)</div></div></div>
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#D32F2F"></div></div><div class="t-info"><div class="t-place">Tiananmen East 天安门东</div><div class="t-sub">Sortie A → traversez la place pour l'entrée nord.</div></div></div>
             </div>
           </div>
-          <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name">Place Tiananmen</div><div class="place-zh">天安门广场</div><div class="place-desc">La plus grande place du monde. Portrait de Mao.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
+          <div class="place"><div class="place-row"><div class="place-time">15:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Tiananmen+Square+Beijing" target="_blank">Place Tiananmen</a></div><div class="place-zh">天安门广场</div><div class="place-desc">La plus grande place du monde. Portrait de Mao.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
         </div>
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Mar 26 août</span><span class="day-title">Grande Muraille</span></div>
           <div class="place">
-            <div class="place-row"><div class="place-time">08:00</div><div class="place-info"><div class="place-name">Grande Muraille — Mutianyu</div><div class="place-zh">慕田峪长城</div><div class="place-desc">Section moins touristique. Téléphérique + toboggan pour descendre !</div><div class="tags"><span class="tag tag-blue">~135 CNY tout inclus</span></div></div></div>
+            <div class="place-row"><div class="place-time">08:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Mutianyu+Great+Wall+Beijing" target="_blank">Grande Muraille — Mutianyu</a></div><div class="place-zh">慕田峪长城</div><div class="place-desc">Section moins touristique. Téléphérique + toboggan pour descendre !</div><div class="tags"><span class="tag tag-blue">~135 CNY tout inclus</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><path d="M8 6v12M3 12h18"/></svg><span>Metro L2 + Bus H23 · 1h30 · ~15 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#D32F2F"></div><div class="t-line" style="background:#D32F2F"></div></div><div class="t-info"><div class="t-place">Votre hôtel</div><div class="t-sub"><span class="lbadge" style="background:#D32F2F;color:white">2</span> jusqu'à Dongzhimen (东直门)</div></div></div>
@@ -302,14 +303,14 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Mer 27 août</span><span class="day-title">Temple du Ciel & Hutongs</span></div>
           <div class="place">
-            <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name">Temple du Ciel</div><div class="place-zh">天坛 · Tiāntán</div><div class="place-desc">Chef-d'œuvre Ming. Tai-chi avec les Pékinois le matin !</div><div class="tags"><span class="tag tag-blue">~35 CNY</span></div></div></div>
+            <div class="place-row"><div class="place-time">09:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Temple+of+Heaven+Beijing" target="_blank">Temple du Ciel</a></div><div class="place-zh">天坛 · Tiāntán</div><div class="place-desc">Chef-d'œuvre Ming. Tai-chi avec les Pékinois le matin !</div><div class="tags"><span class="tag tag-blue">~35 CNY</span></div></div></div>
             <button class="transit-btn" onclick="toggleT(this)"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19v2M16 19v2"/></svg><span>Ligne 5 → Tiantan East Gate · 15 min · 4 CNY</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
             <div class="transit-detail">
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#8B3A8B"></div><div class="t-line" style="background:#8B3A8B"></div></div><div class="t-info"><div class="t-place">Votre hôtel</div><div class="t-sub"><span class="lbadge" style="background:#8B3A8B;color:white">5</span> direction Songjiazhuang (宋家庄)</div></div></div>
               <div class="t-step"><div class="t-dot-col"><div class="t-dot" style="background:#8B3A8B"></div></div><div class="t-info"><div class="t-place">Tiantan East Gate 天坛东门</div><div class="t-sub">Sortie directe sur l'entrée est du temple.</div></div></div>
             </div>
           </div>
-          <div class="place"><div class="place-row"><div class="place-time">14:00</div><div class="place-info"><div class="place-name">Hutongs & Lac Houhai</div><div class="place-zh">胡同 / 后海</div><div class="place-desc">Ruelles historiques. Rickshaw. Bars au bord du lac le soir. Station Beihai North (北海北) Ligne 6, Sortie B.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
+          <div class="place"><div class="place-row"><div class="place-time">14:00</div><div class="place-info"><div class="place-name"><a class="place-link" href="https://maps.google.com/?q=Houhai+Lake+Hutong+Beijing" target="_blank">Hutongs & Lac Houhai</a></div><div class="place-zh">胡同 / 后海</div><div class="place-desc">Ruelles historiques. Rickshaw. Bars au bord du lac le soir. Station Beihai North (北海北) Ligne 6, Sortie B.</div><div class="tags"><span class="tag tag-green">Gratuit</span></div></div></div></div>
         </div>
         <div class="day-card">
           <div class="day-header"><span class="day-badge">Sam 29 août</span><span class="day-title">Retour Barcelone</span></div>
@@ -472,11 +473,79 @@ body { font-family: 'DM Sans', sans-serif; color: var(--ink); }
       <div class="section-label" style="padding:16px 16px 8px">Vue d'ensemble</div>
       <div class="budget-grid">
         <div class="b-item"><div class="b-label">Vols totaux</div><div class="b-val">3 251€</div><div class="b-sub">BCN ↔ Chine + internes</div></div>
-        <div class="b-item"><div class="b-label">Hébergements</div><div class="b-val">766€</div><div class="b-sub">Shanghai + ZJJ + Pékin</div></div>
+        <div class="b-item"><div class="b-label">Hébergements</div><div class="b-val">907€</div><div class="b-sub">4 hôtels confirmés</div></div>
         <div class="b-item"><div class="b-label">Repas / jour</div><div class="b-val">15€</div><div class="b-sub">Par personne</div></div>
         <div class="b-item"><div class="b-label">Excursions</div><div class="b-val">~400€</div><div class="b-sub">Avatar + activités</div></div>
       </div>
-      <div class="tip-card" style="margin-top:14px"><div class="tip-head"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span>Shanghai</span></div><div class="tip-row"><div><div class="tip-label">Shanghai Tower</div><div class="tip-text">~150 CNY ≈ 19€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Jardin Yu</div><div class="tip-text">~30 CNY ≈ 4€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Musée de Shanghai</div><div class="tip-text">Gratuit (passeport requis)</div></div></div></div>
+
+      <div class="section-label" style="margin-top:8px">Hébergements confirmés</div>
+      <div class="tip-card">
+        <div class="tip-head"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Shanghai · 17–20 août</span></div>
+        <div class="tip-row">
+          <div class="tip-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div>
+            <div class="tip-label"><a class="place-link" href="https://maps.google.com/?q=WangYue+Paris+Fashion+Shanghai+Financial+Center" target="_blank">WangYue — Paris Fashion ShFinancial Center</a></div>
+            <div class="tip-text">2 King Beds · Vue landmark · Annulation gratuite</div>
+            <div style="margin-top:6px; display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-size:11px; background:#EAF5EC; color:#1A7A30; padding:2px 8px; border-radius:6px;">Confirmé</span>
+              <span style="font-size:15px; font-weight:500; color:#B5311A;">242€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card" style="margin-top:12px">
+        <div class="tip-head"><svg viewBox="0 0 24 24"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg><span>Zhangjiajie · 20–24 août</span></div>
+        <div class="tip-row">
+          <div class="tip-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div>
+            <div class="tip-label"><a class="place-link" href="https://maps.google.com/?q=Tianmenshan+YOLO+RELIAN+Riverside+Hotel+Zhangjiajie" target="_blank">Tianmenshan YOLO RELIAN — Riverside</a></div>
+            <div class="tip-text">Vue montagne & rivière · Lever/coucher de soleil · Ticket attractions · Thé & café inclus · Annulation gratuite</div>
+            <div style="margin-top:6px; display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-size:11px; background:#EAF5EC; color:#1A7A30; padding:2px 8px; border-radius:6px;">Confirmé</span>
+              <span style="font-size:15px; font-weight:500; color:#B5311A;">267€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card" style="margin-top:12px">
+        <div class="tip-head"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V10M8 20V4M12 20V8M16 20V12M20 20v-6"/></svg><span>Xi'an · 24–26 août</span></div>
+        <div class="tip-row">
+          <div class="tip-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div>
+            <div class="tip-label"><a class="place-link" href="https://maps.google.com/?q=西安大唐印+Siheyuan+Xian" target="_blank">西安大唐印 — Siheyuan 唐风设计民宿</a></div>
+            <div class="tip-text">Maison de cour traditionnelle · Design style Tang · Ambiance authentique · Annulation gratuite</div>
+            <div style="margin-top:6px; display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-size:11px; background:#EAF5EC; color:#1A7A30; padding:2px 8px; border-radius:6px;">Confirmé</span>
+              <span style="font-size:15px; font-weight:500; color:#B5311A;">76€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card" style="margin-top:12px">
+        <div class="tip-head"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg><span>Pékin · 26–30 août</span></div>
+        <div class="tip-row">
+          <div class="tip-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div>
+            <div class="tip-label"><a class="place-link" href="https://maps.google.com/?q=Happy+Dragon+Hotel+Beijing+Forbidden+City" target="_blank">Happy Dragon Hotel</a></div>
+            <div class="tip-text">National Art Museum · Métro Cité Interdite · Emplacement idéal centre historique · Annulation gratuite</div>
+            <div style="margin-top:6px; display:flex; align-items:center; justify-content:space-between;">
+              <span style="font-size:11px; background:#EAF5EC; color:#1A7A30; padding:2px 8px; border-radius:6px;">Confirmé</span>
+              <span style="font-size:15px; font-weight:500; color:#B5311A;">322€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin:14px 16px 0; background:var(--white); border-radius:16px; border:0.5px solid var(--line); padding:14px 16px; display:flex; justify-content:space-between; align-items:center;">
+        <div style="font-size:13px; font-weight:500; color:var(--ink);">Total hébergements</div>
+        <div style="font-size:20px; font-weight:500; color:#B5311A; font-family:'Noto Serif SC',serif;">907€</div>
+      </div>
+
+      <div class="section-label" style="margin-top:8px">Détail excursions par ville</div>
+      <div class="tip-card" style="margin-top:0"><div class="tip-head"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span>Shanghai</span></div><div class="tip-row"><div><div class="tip-label">Shanghai Tower</div><div class="tip-text">~150 CNY ≈ 19€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Jardin Yu</div><div class="tip-text">~30 CNY ≈ 4€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Musée de Shanghai</div><div class="tip-text">Gratuit (passeport requis)</div></div></div></div>
       <div class="tip-card" style="margin-top:12px"><div class="tip-head"><svg viewBox="0 0 24 24"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg><span>Zhangjiajie</span></div><div class="tip-row"><div><div class="tip-label">Parc National (2j)</div><div class="tip-text">~245 CNY ≈ 31€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Pont de verre</div><div class="tip-text">~138 CNY ≈ 18€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Montagne Tianmen tout inclus</div><div class="tip-text">~258 CNY ≈ 33€/pers</div></div></div></div>
       <div class="tip-card" style="margin-top:12px"><div class="tip-head"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V10M8 20V4M12 20V8M16 20V12M20 20v-6"/></svg><span>Xi'an</span></div><div class="tip-row"><div><div class="tip-label">Armée de Terre Cuite</div><div class="tip-text">~150 CNY ≈ 19€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Remparts + vélo</div><div class="tip-text">~54 CNY ≈ 7€/pers</div></div></div></div>
       <div class="tip-card" style="margin-top:12px; margin-bottom:4px"><div class="tip-head"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg><span>Pékin</span></div><div class="tip-row"><div><div class="tip-label">Cité Interdite</div><div class="tip-text">~60 CNY ≈ 8€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Grande Muraille Mutianyu</div><div class="tip-text">~135 CNY ≈ 17€/pers</div></div></div><div class="tip-row"><div><div class="tip-label">Temple du Ciel</div><div class="tip-text">~35 CNY ≈ 5€/pers</div></div></div></div>
